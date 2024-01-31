@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Gu&iacute;a</title>
+</head>
+
+<link rel="stylesheet" href="../apariencia.css">
+
+<div class="topnav">
+    <a href="../index.html">Página principal</a>
+    <a href="../guias.html">Guías</a>
+    <a href="../links.html">Enlaces</a>
+</div>
+
+<body>
+    <h1>Guía: Cómo instalar OneCore API en Windows XP</h1>
+    <h3>OneCore API  es un conjunto de archivos de sistema que le permiten a Windows XP ejecutar versiones modernas de aplicaciones que oficialmente dejaron de darle soporte a dicho sistema operativo.</h3>
+    <p>El proceso para instalar OneCore API puede ser algo enredado a comparación del proceso de Extended Kernel para Windows Vista, por lo que deberán ser pacientes y se recomienda el uso de máquina virtual en caso de que se produzcan problemas con el arranque del sistema operativo 
+        (<b>Nota:</b> a partir de la versión 3.0, OneCore API debería funcionar de manera más estable en hardware real, pero igual se recomienda que usen una máquina virtual primero para probarlo). 
+        Dicho esto, vamos con la instalación.</p>
+    <p><ins>Importante:</ins> Los archivos requeridos se pueden <a href="https://github.com/Skulltrail192/One-Core-API-Binaries/releases">descargar aquí</a> (Nota: si les aparece que el archivo .zip tiene virus o algo así, agreguen el archivo como excepción, porque es un falso positivo 
+        y no lo vamos a instalar en un sistema operativo que no sea Windows XP de todos modos).</p>
+    <p>Prerrequisitos: Windows XP SP3 o Windows XP x64 SP2 instalado, idealmente en inglés y actualizados (pueden instalar las actualizaciones con Legacy Update).</p>
+    <p>Paso 1: Descarga el archivo ZIP del Github vinculado arriba. Luego, extrae la carpeta x86 o x64 usando WinRAR o 7-Zip, dependiendo de la arquitectura de su procesador, 
+        la cual pueden revisar haciendo clic derecho en Mi PC o My Computer y clic en Propiedades (si les aparece x64 Edition deben usar los archivos de la carpeta x64 y sino, deben usar los archivos de la carpeta x86).</p>
+    <p>Paso 2: Ejecuta los archivos de instalación en este orden: <i>one-core-api-base.exe - one-core-api-additional-dll.exe - one-core-api-branding.exe - one-core-api-d3d.exe - one-core-api-driver-update.exe - one-core-api-app-compat.exe.</i> 
+        <b>Nota: la sección "Installation order of packages" del Github hace mención de archivos que no están presentes en el archivo .zip de la versión actual (3.0.5 al momento de escribir esto), por lo que simplemente puedes ignorarlos.</b> 
+        Haz clic en "Do not restart now" al finalizar la instalación de cada archivo (si no aparece esta opción, simplemente dale a Finalizar) a excepción del último. Si aparece una alerta de Windows File Protection pidiendo que insertes el disco de instalación de Windows, 
+        simplemente dale en Cancelar.</p>
+    <p>Paso 3: Reinicia el sistema operativo. Si todo salió bien, deberías poder ejecutar aplicaciones modernas en Windows XP. Si no, intenta reinstalar OneCore API siguiendo los pasos anteriores.</p>
+    <p>¡Y listo! Para instalar aplicaciones incompatibles deben ir a Propiedades, luego Modo de Compatibilidad y elegir Windows 7 o alguna versión posterior. Algunas aplicaciones requieren de pasos extra. 
+        Por ejemplo, para Chrome u otros navegadores basados en Chromium, deben colocar un Acceso directo en el Escritorio, ir a Propiedades y pegar el siguiente texto en la ruta de la aplicación: 
+        <b>--no-sandbox --force-wave-audio --disable-exclusive-audio</b>.</p>
+    <h3>Lista de compatibilidad de OneCore API:</h3>
+    <ul>
+        <li>Chromium 122 o anteriores</li>
+        <li>Firefox 115 o anteriores</li>
+        <li>SumatraPDF (última versión)</li>
+        <li>Notepad++ (última versión)</li>
+        <li>Juegos de Windows 7</li>
+        <li>WinRAR (última versión)</li>
+        <li>Zoom (última versión)</li>
+    </ul>
+    <h6>Última actualización: 31 de enero de 2024</h6>
+</body>
+
+</html>

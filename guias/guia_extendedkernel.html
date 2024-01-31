@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Gu&iacute;a</title>
+</head>
+
+<link rel="stylesheet" href="../apariencia.css">
+
+<div class="topnav">
+    <a href="../index.html">Página principal</a>
+    <a href="../guias.html">Guías</a>
+    <a href="../links.html">Enlaces</a>
+</div>
+
+<body>
+    <h1>Guía: Cómo instalar Extended Kernel en Windows Vista</h1>
+    <h3>Extended Kernel es un conjunto de archivos de sistema que le permiten a Windows Vista ejecutar versiones modernas de aplicaciones que oficialmente dejaron de darle soporte a dicho sistema operativo. </h3>
+    <p>El proceso de instalación de Extended Kernel es bastante simple y en esta guía escrita les mostraré paso a paso cómo instalar Extended Kernel y cómo usarlo.</p>
+    <p>Importante: deben descargar los archivos desde <a href="https://ximonite.com/win32/download.html">este enlace</a>.</p>
+    <p>Prerrequisitos: Windows Vista SP2 (32 o 64 bits, preferiblemente 64 bits) instalado.</p>
+    <p>Paso 1: Descargar e instalar la actualización cumulativa <a href="https://www.catalog.update.microsoft.com/search.aspx?q=kb4474419">KB4474419</a>. Deben elegir la versión para Windows Server 2008 y 
+        dependiendo de la arquitectura de su procesador deben descargar el archivo que dice x86 para 32 bits o el que dice x64 para 64 bits.</p>
+    <p>Paso 2: Descargar e instalar la actualización cumulativa <a href="https://www.catalog.update.microsoft.com/search.aspx?q=kb971512">KB971512</a>. Deben elegir la versión para Windows Vista y al igual que con la actualización anterior 
+        deben elegir el archivo que corresponda a la arquitectura de su procesador.</p>
+    <p>Paso 3: Descargar el archivo <i>vistaexkernsetup_03092023.7z</i> y extraerlo con WinRAR o 7-zip. Dicho archivo se encuentra en el enlace de más arriba.</p>
+    <p>Paso 4: Entre los archivos extraídos, ejecutar el archivo <i>setup.exe</i> como administrador y cuando se abra la ventana del terminal presionan cualquier tecla (excepto R).</p>
+    <p>Paso 5: Descargar el archivo <i>mfplatsetup.7z</i> y extraerlo con WinRAR o 7-zip.</p>
+    <p>Paso 6: Entre los archivos extraídos, ejecutar el archivo <i>mfplatsetup.cmd</i> como administrador, luego presionar cualquier tecla.</p>
+    <p>Paso 7: Abrir el Bloc de Notas y pegar el siguiente texto:</p>
+    <p><span style="font-family: courier;">[global]</span></p><p><span style="font-family: courier;">Enabled=1</span></p><p><span style="font-family: courier;">MajorVersion=6</span></p>
+    <p><span style="font-family: courier;">MinorVersion=1</span></p><p><span style="font-family: courier;">BuildNumber=7601</span></p><p>Luego se debe guardar el archivo como osver.ini (es importante cambiar la extensión del archivo, lo cual se puede hacer cambiando el tipo de guardado a "Todos los archivos" o "All Files"). Dicho archivo deberá ser movido a la carpeta C:\Windows.</p>
+    <p>En este caso, cada línea tiene un significado:</p>
+    <p></p><ul>
+        <li><span style="font-family: courier;">Enabled=1</span>: Representa si el sistema operativo debe usar los valores del archivo o no.</li><li><span style="font-family: courier;">MajorVersion=6</span>: Número de versión mayor del kernel de Windows NT. En este caso, el número 6 es el número de versión de Windows que se usa desde Windows Vista hasta Windows 8.1 (este número se cambió a 10 en Windows 10).</li>
+        <li><span style="font-family: courier;">MinorVersion=1</span>: Número de versión menor del kernel de Windows NT. En este caso, el número 1 es el número de versión de Windows 7.</li><li><span style="font-family: courier;">BuildNumber=7601</span>: Número de compilación (o build) del kernel de Windows NT. En este caso, el número 7601 es el número de compilación de Windows 7.</li>
+    </ul>
+    <p>Esto engañará a las aplicaciones para que piensen que se está usando Windows 7 en vez de Windows Vista. En el caso de OBS, deberán cambiar&nbsp;<span style="font-family: courier;">MajorVersion</span>&nbsp;a 10,&nbsp;<span style="font-family: courier;">MinorVersion</span>&nbsp;a 0 y&nbsp;<span style="font-family: courier;">BuildNumber</span>&nbsp;a 19045, 19044, 19042 o cualquier número de compilación válido para Windows 10. 
+        Esto le hará pensar a OBS que se está instalando en Windows 10 (Nota: Para algunos programas deberán restablecer los valores a los de más arriba después de instalar OBS).</p>
+    <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto;"><tbody><tr><td style="text-align: center;"><a href="../imagenes/imagen1.png" style="margin-left: auto; margin-right: auto;">
+        <img border="0" data-original-height="423" data-original-width="429" height="316" src="../imagenes/imagen1.png" width="320" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Ejemplo de cómo quedaría winver después de guardar el archivo osver.ini</td></tr></tbody></table><br />¡Y listo! Ya tienen Extended Kernel completamente instalado y listo para usar.
+        <div><br /></div><div>Video mostrando lo que se puede hacer con Extended Kernel:</div>
+        <div class="separator" style="clear: both; text-align: center;"><iframe allowfullscreen="" class="BLOG_video_class" height="266" src="https://www.youtube.com/embed/u-bsN7cvY5g" width="320" youtube-src-id="u-bsN7cvY5g"></iframe></div><br /><div><br /></div>
+        <div><h3>Lista de compatibilidad de Extended Kernel</h3>
+            <p>Lista de programas que funcionan en Windows Vista haciendo uso de Extended Kernel.</p>
+            <p>Firefox 102 ESR e inferiores (las últimas versiones deberían funcionar, pero en mi caso no logré hacerlas funcionar).</p>
+            <p>Chromium 109 e inferiores</p>
+            <p>Visual Studio Code 1.77.3</p>
+            <p>OBS Studio 30.0.2</p>
+            <p>LibreOffice 7.5.3.2</p>
+            <p>WinRAR (última versión)</p>
+            <p>Notepad++ (última versión)</p>
+            <p>Cualquier programa que funcione nativamente en Windows Vista sin Extended Kernel (ej. 7-Zip o VLC Media Player)</p>
+            <h3>Programas que se instalan, pero no funcionan:</h3>
+            <p>Steam (última versión)</p>
+            <p>Adobe Reader (última versión)</p>
+            <div>
+                <span style="font-size: x-small;">Última actualización: 31 de enero de 2024</span>
+            </div>
+        </div>
+</body>
+
+</html>
