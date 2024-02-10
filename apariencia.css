@@ -2,13 +2,40 @@ body {
     background-color: #abcdef;
 }
 h1 {
+    font-family: Roboto;
     color: #0066ff;
     text-align: center;
 }
 p {
+    font-family: Roboto;
     font-size: 20px;
 }
+h2 {
+    font-family: Roboto;
+}
+h3 {
+    font-family: Roboto;
+}
+h4 {
+    font-family: Roboto;
+}
+h5 {
+    font-family: Roboto;
+}
+h6 {
+    font-family: Roboto;
+}
+ul {
+    font-family: Roboto;
+}
+div {
+    font-family: Roboto;
+}
+tr {
+    font-family: Roboto;
+}
 .topnav {
+    font-family: Roboto;
     overflow: hidden;
     background-color: #333;
 }
