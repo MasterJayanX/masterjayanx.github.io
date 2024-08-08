@@ -1,0 +1,121 @@
+<html>
+<head>
+    <title>Gu&iacute;a: C&oacute;mo crear una m&aacute;quina virtual</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="icon" href="imagenes/MasterJayanX.png">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4334398560216376"
+    crossorigin="anonymous"></script>
+</head>
+    
+<link rel="stylesheet" href="../apariencia.css">
+    
+<div class="topnav">
+    <a href="../index.html">Página principal</a>
+    <a href="../guias.html">Guías</a>
+    <a href="../proyectos.html">Proyectos</a>
+    <a href="../about.html">Sobre mí</a>
+</div>
+
+<body>
+    <h1 id="cómo-crear-una-máquina-virtual">Cómo crear una máquina virtual</h1>
+    <p>Una máquina virtual podría describirse en simples palabras como un computador dentro de otro computador, permitiendo una emulación completa del hardware y el software para dicho &quot;computador&quot;.</p>
+    <p>Las máquinas virtuales tienen múltiples usos, siendo el principal el poder usar dos o más sistemas operativos en tu computador simultáneamente. Otros usos más específicos incluyen hacer pruebas de virus sin vulnerear tu sistema operativo, crear instancias de servidores o crear un entorno seguro para el desarrollo de aplicaciones.</p>
+    <p>Crear una máquina virtual puede ser algo confuso para algunos, pero la verdad es que es más sencillo de lo que parece y es por eso que hice esta guía.</p>
+    <h2 id="parte-1-descargar-el-sistema-operativo">Parte 1: Descargar el sistema operativo</h2>
+    <p>El primer paso es el más sencillo y probablemente el más corto, siendo el de elegir el sistema operativo que quieras instalar. Los más recomendables son cualquier versión de Windows y cualquier distribución de Linux, ya que estos suelen ser los sistemas operativos que más se utilizan en entornos virtualizados.</p>
+    <p>Para descargar el sistema operativo de tu elección, debes simplemente ir a su sitio web de descarga, elegir la última versión disponible y descargar el archivo .iso correspondiente. En algunos casos, te dará a elegir entre x86, x86_64 y, en algunos casos, ARM (aarch64), PowerPC y/o RISC V, por lo que en estos casos deberás elegir x86 para 32 bits o x86_64 para 64 bits.</p>
+    <h4>Nota: para versiones antiguas de Windows, es probable que tengas que descargarlas desde sitios web externos.</h4>
+    <h2 id="parte-2-crear-la-máquina-virtual">Parte 2: Crear la máquina virtual</h2>
+    <p>Este proceso tiene algunas diferencias según el hipervisor (software de máquinas virtuales) que estés usando, por lo que les explicaré los pasos para Oracle VM Virtualbox y para VMware Workstation (próximamente lo haré con QEMU). Para el sistema operativo de la máquina virtual, usaré Ubuntu, pero esta guía sirve para cualquier sistema operativo que quieras.</p>
+    <h3 id="oracle-vm-virtualbox">Oracle VM Virtualbox</h3>
+    <ol>
+    <li><p>Al abrir el programa, haz clic en el botón de la parte superior que dice Nueva para crear una nueva máquina virtual.</p>
+    </li>
+    <li><p>Aparecerá una ventana con algunas opciones. Aquí puedes ingresar el nombre que le quieres colocar a la máquina virtual, la carpeta en la que la quieres guardar y el archivo .iso que quieres usar como medio virtual de instalación. Este último debería ser el archivo obtenido en la Parte 1. Además, aparecerá la opción de elegir el sistema operativo, aunque este debería ser detectado automáticamente en la mayoría de los casos y una opción para desactivar la instalación desatendida, pero yo la mantendré habilitada para esta guía.</p>
+    <figure>
+    <img src="../imagenes/imagen2.png" width=540 />
+    </figure>
+    </li>
+    <li><p>Si eliges mantener la instalación desatendida habilitada, aparecerá esta pantalla, en la que deberás configurar los apartados según desees. Ten en cuenta que la contraseña por defecto es changeme, por lo que es recomendable cambiarla.</p>
+    <figure>
+    <img src="../imagenes/imagen3.png" width=540 />
+    </figure>
+    </li>
+    <li><p>Luego, podrás configurar la cantidad de RAM y núcleos de procesador que le quieres asignar a la máquina virtual. En este ejemplo, le asigné 8 GB de RAM y 2 núcleos de procesador. Lo recomendable es que le asignes la mitad o menos de la RAM total de tu equipo y entre 1 y la mitad de núcleos de tu procesador. Por ejemplo, si tienes 16 GB de RAM y un procesador de 4 núcleos, recomiendo asignarle 8 GB de RAM o menos y 2 núcleos de procesador a la máquina virtual.</p>
+    <figure>
+    <img src="../imagenes/imagen4.png" width=540 />
+    </figure>
+    </li>
+    <li><p>Una vez hecho esto, solo queda configurar el espacio de almacenamiento que se le asignará a la máquina virtual. Lo recomendable es darle suficiente almacenamiento a la máquina virtual para las tareas que desees hacer con ella sin saturar la unidad de almacenamiento (disco duro, SSD, pendrive etc.) en la que está alojada la máquina virtual. En este ejemplo, le asigné 60 GB.</p>
+    <figure>
+    <img src="../imagenes/imagen5.png" width=540 />
+    </figure>
+    </li>
+    <li><p>Una vez que hayas verificado que todo está como deseas, puedes darle a Terminar y encender la máquina virtual (puede que esto se haga automáticamente si mantuviste la instalación desatendida habilitada).</p>
+    </li>
+    <li><p>Instala el sistema operativo como lo harías normalmente, siguiendo las instrucciones que aparecen en pantalla.</p>
+    </li>
+    </ol>
+    <h3 id="vmware-workstation">VMware Workstation</h3>
+    <ol>
+    <li><p>Al abrir el programa haz clic en donde dice Crate new virtual machine para crear una nueva máquina virtual.</p>
+    </li>
+    <li><p>Aparecerá una pantalla en la que puedes seleccionar un archivo .iso con el sistema operativo que quieras instalar o no elegirlo en ese momento (en ese caso deberás hacerlo manualmente).</p>
+    <figure>
+    <img src="../imagenes/imagen6.png" width=460 />
+    </figure>
+    </li>
+    <li><p>Por defecto, VMware Workstation realizará una instalación desatendida (Easy Install), por lo que te pedirá colocar los datos que quieras usar para la máquina virtual (nombre de usuario y contraseña del sistema operativo y la clave de producto si vas a instalar Windows). Sin embargo, esto se puede omitir si no seleccionas un archivo .iso en el primer menú.</p>
+    </li>
+    <li><p>Luego te pedirá darle un nombre a la máquina virtual y elegir la carpeta en la que la quieres guardar. </p>
+    <figure>
+    <img src="../imagenes/imagen8.png" width=460 />
+    </figure>
+    </li>
+    <li><p>Posteriormente te pedirá configurar el espacio de almacenamiento que se le asignará a la máquina virtual. Lo recomendable es darle suficiente almacenamiento a la máquina virtual para las tareas que desees hacer con ella sin saturar la unidad de almacenamiento (disco duro, SSD, pendrive etc.) en la que está alojada la máquina virtual. En este ejemplo, le asigné 80 GB. Además, te dará a elegir si quieres dividir el disco virtual en varios archivos o dejarlo como uno solo, para lo cual recomiendo mantener la configuración por defecto.</p>
+    <figure>
+    <img src="../imagenes/imagen9.png" width=460 />
+    </figure>
+    </li>
+    <li><p>Finalmente te dejará ajustar otras opciones de la máquina virtual como la RAM que le quireres asignar o la cantidad de núcleos del CPU. Las opciones que recomiendo son las que menciono en el paso 4 para Oracle VM Virtualbox.</p>
+    </li>
+    </ol>
+    <p>Nota: la cantidad de RAM se mostrará en MB en VMware. Para pasar de GB a MB basta con multiplicar el valor por 1024 (ejemplo: 8 GB = 8192 MB).</p>
+    <ol start="7">
+    <li><p>Una vez que hayas verificado que todo está como deseas, puedes darle a Terminar y encender la máquina virtual (puede que esto se haga automáticamente si mantuviste la instalación desatendida habilitada).</p>
+    </li>
+    <li><p>Instala el sistema operativo como lo harías normalmente, siguiendo las instrucciones que aparecen en pantalla.</p>
+    </li>
+    </ol>
+    <h2 id="parte-3-finalizar-la-instalación">Parte 3: Finalizar la instalación</h2>
+    <h3 id="oracle-vm-virtualbox-1">Oracle VM Virtualbox</h3>
+    <p>Una vez finalizada la instalación, se recomienda instalar Virtualbox Guest Additions para mejorar la experiencia de uso considerablemente, incluyendo la posibilidad de cambiar la resolución de pantalla dinámicamente, poder usar el mouse y el teclado de manera compartida entre la máquina virtual y el sistema operativo principal, compartir el portapapeles, entre otras cosas.</p>
+    <p>Para ello, se deben seguir los siguientes pasos: </p>
+    <ol>
+    <li><p>Teniendo la máquina virtual activa, haz clic en Dispositivos y luego en Insertar imagen de CD de los complementos de invitado. Si estás en Windows, solo sigue el paso 2, pero si estás en Linux debes seguir los pasos 3 en adelante.</p>
+    </li>
+    <li><p>Si estás usando una máquina virtual de Windows, el instalador debería abrirse automáticamente. Aquí debes simplemente seguir los pasos en pantalla para realizar la instalación. No olvides reiniciar la máquina virtual una vez finalizada la instalación.</p>
+    </li>
+    <li><p>Por otro lado, si estás usando una máquina virtual de Linux, deberás abrir el directorio del CD que acabamos de &quot;insertar&quot;, hacer clic derecho y luego clic en Abrir en una terminal.</p>
+    </li>
+    <li><p>Una vez abierta, escribe <code>sudo -s</code> para entrar en modo de superusuario (básicamente modo admin) y luego escribe <code>./VBoxLinuxAdditions.run</code>. Si da un error diciendo que faltan los paquetes bzip2 y tar, simplemente instálalos usando <code>apt install bzip2 tar</code> e inténtalo de nuevo. Nota: este último comando dependerá de tu distribución Linux.</p>
+    </li>
+    </ol>
+    <h3 id="vmware-workstation-1">VMware Workstation</h3>
+    <p>Una vez finalizada la instalación, se recomienda instalar VMware Tools para mejorar la experiencia de uso considerablemente, incluyendo la posibilidad de cambiar la resolución de pantalla dinámicamente, poder usar el mouse y el teclado de manera compartida entre la máquina virtual y el sistema operativo principal, compartir el portapapeles, entre otras cosas. Esto no es necesario en algunas distribuciones Linux, ya que en estas se instala open-vm-tools.</p>
+    <p>Para ello, se deben seguir los siguientes pasos: </p>
+    <ol>
+    <li><p>Teniendo la máquina virtual activa, haz clic en VM y luego en Install VMware Tools. Si estás en Windows, solo sigue el paso 2, pero si estás en Linux y open-vm-tools no está instalado, sigue los pasos 3 en adelante.</p>
+    </li>
+    <li><p>Si estás usando una máquina virtual de Windows, el instalador debería abrirse automáticamente. Aquí debes simplemente seguir los pasos en pantalla para realizar la instalación. No olvides reiniciar la máquina virtual una vez finalizada la instalación.</p>
+    </li>
+    <li><p>Por otro lado, si estás en Linux y open-vm-tools no está instalado, puedes instalarlo usando el gestor de paquetes de tu distribución. Por ejemplo, en Debian o Ubuntu sería <code>sudo apt install open-vm-tools-desktop</code>.</p>
+    </li>
+    </ol>
+    <div>
+        <h5>Última actualización: 7 de agosto de 2024</h6>
+    </div>
+    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#29abe0', 'D1D37FMC3');kofiwidget2.draw();</script> 
+</body>
+
+</html>

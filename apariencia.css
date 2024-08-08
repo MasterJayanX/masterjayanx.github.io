@@ -1,9 +1,9 @@
 body {
-    background-color: #abcdef;
+    background: linear-gradient(to bottom right, #abcdef, #519be6);
 }
 h1 {
     font-family: Roboto;
-    color: #0066ff;
+    color: #003366;
     text-align: center;
 }
 p {
