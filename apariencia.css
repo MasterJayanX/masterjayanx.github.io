@@ -1,14 +1,15 @@
 body {
-    background: linear-gradient(to bottom right, #abcdef, #519be6);
+    background: linear-gradient(to bottom right, #abcdef, #64aef8);
 }
 h1 {
     font-family: Roboto;
+    font-size: 32px;
     color: #003366;
     text-align: center;
 }
 p {
-    font-family: Roboto;
-    font-size: 20px;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
 }
 h2 {
     font-family: Roboto;
