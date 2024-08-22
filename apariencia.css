@@ -62,3 +62,16 @@ tr {
     background-color: #0066ff;
     color: white;
 }
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 16px;
+    }
+    .topnav a {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+}

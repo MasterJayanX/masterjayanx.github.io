@@ -102,3 +102,15 @@
 .maquina_virtual:hover {
     background-color: #1f3a5f;
 }
+
+@media (max-width: 600px) {
+    .button {
+        font-size: 14px;
+        padding: 10px 14px;
+        margin-right: 4px;
+        margin-left: 4px;
+    }
+    .button i {
+        margin-right: 8px;
+    }
+}
