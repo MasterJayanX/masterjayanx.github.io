@@ -30,6 +30,30 @@
         margin-left: 20px;
         font-family: Roboto;
     }
+    .img {
+        width: 540px;
+    }
+    .img2 {
+        width: 460px;
+    }
+    @media screen and (max-width: 600px) {
+        p {
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+        h4 {
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+        .img {
+            width: 300px;
+            margin-left: 0;
+        }
+        .img2 {
+            width: 300px;
+            margin-left: 0;
+        }
+    }
 </style>
 
 <body>
@@ -49,22 +73,22 @@
     </li>
     <li><p>Aparecerá una ventana con algunas opciones. Aquí puedes ingresar el nombre que le quieres colocar a la máquina virtual, la carpeta en la que la quieres guardar y el archivo .iso que quieres usar como medio virtual de instalación. Este último debería ser el archivo obtenido en la Parte 1. Además, aparecerá la opción de elegir el sistema operativo, aunque este debería ser detectado automáticamente en la mayoría de los casos y una opción para desactivar la instalación desatendida, pero yo la mantendré habilitada para esta guía.</p>
     <figure>
-    <img src="../imagenes/imagen2.png" width=540 />
+    <img src="../imagenes/imagen2.png" class="img" />
     </figure>
     </li>
     <li><p>Si eliges mantener la instalación desatendida habilitada, aparecerá esta pantalla, en la que deberás configurar los apartados según desees. Ten en cuenta que la contraseña por defecto es changeme, por lo que es recomendable cambiarla.</p>
     <figure>
-    <img src="../imagenes/imagen3.png" width=540 />
+    <img src="../imagenes/imagen3.png" class="img" />
     </figure>
     </li>
     <li><p>Luego, podrás configurar la cantidad de RAM y núcleos de procesador que le quieres asignar a la máquina virtual. En este ejemplo, le asigné 8 GB de RAM y 2 núcleos de procesador. Lo recomendable es que le asignes la mitad o menos de la RAM total de tu equipo y entre 1 y la mitad de núcleos de tu procesador. Por ejemplo, si tienes 16 GB de RAM y un procesador de 4 núcleos, recomiendo asignarle 8 GB de RAM o menos y 2 núcleos de procesador a la máquina virtual.</p>
     <figure>
-    <img src="../imagenes/imagen4.png" width=540 />
+    <img src="../imagenes/imagen4.png" class="img" />
     </figure>
     </li>
     <li><p>Una vez hecho esto, solo queda configurar el espacio de almacenamiento que se le asignará a la máquina virtual. Lo recomendable es darle suficiente almacenamiento a la máquina virtual para las tareas que desees hacer con ella sin saturar la unidad de almacenamiento (disco duro, SSD, pendrive etc.) en la que está alojada la máquina virtual. En este ejemplo, le asigné 60 GB.</p>
     <figure>
-    <img src="../imagenes/imagen5.png" width=540 />
+    <img src="../imagenes/imagen5.png" class="img" />
     </figure>
     </li>
     <li><p>Una vez que hayas verificado que todo está como deseas, puedes darle a Terminar y encender la máquina virtual (puede que esto se haga automáticamente si mantuviste la instalación desatendida habilitada).</p>
@@ -78,19 +102,19 @@
     </li>
     <li><p>Aparecerá una pantalla en la que puedes seleccionar un archivo .iso con el sistema operativo que quieras instalar o no elegirlo en ese momento (en ese caso deberás hacerlo manualmente).</p>
     <figure>
-    <img src="../imagenes/imagen6.png" width=460 />
+    <img src="../imagenes/imagen6.png" class="img2" />
     </figure>
     </li>
     <li><p>Por defecto, VMware Workstation realizará una instalación desatendida (Easy Install), por lo que te pedirá colocar los datos que quieras usar para la máquina virtual (nombre de usuario y contraseña del sistema operativo y la clave de producto si vas a instalar Windows). Sin embargo, esto se puede omitir si no seleccionas un archivo .iso en el primer menú.</p>
     </li>
     <li><p>Luego te pedirá darle un nombre a la máquina virtual y elegir la carpeta en la que la quieres guardar. </p>
     <figure>
-    <img src="../imagenes/imagen8.png" width=460 />
+    <img src="../imagenes/imagen8.png" class="img2" />
     </figure>
     </li>
     <li><p>Posteriormente te pedirá configurar el espacio de almacenamiento que se le asignará a la máquina virtual. Lo recomendable es darle suficiente almacenamiento a la máquina virtual para las tareas que desees hacer con ella sin saturar la unidad de almacenamiento (disco duro, SSD, pendrive etc.) en la que está alojada la máquina virtual. En este ejemplo, le asigné 80 GB. Además, te dará a elegir si quieres dividir el disco virtual en varios archivos o dejarlo como uno solo, para lo cual recomiendo mantener la configuración por defecto.</p>
     <figure>
-    <img src="../imagenes/imagen9.png" width=460 />
+    <img src="../imagenes/imagen9.png" class="img2" />
     </figure>
     </li>
     <li><p>Finalmente te dejará ajustar otras opciones de la máquina virtual como la RAM que le quireres asignar o la cantidad de núcleos del CPU. Las opciones que recomiendo son las que menciono en el paso 4 para Oracle VM Virtualbox.</p>
