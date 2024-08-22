@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(to bottom right, #abcdef, #64aef8);
+    background: linear-gradient(to bottom right, #c0d9f5, #58a2ec);
 }
 h1 {
     font-family: Roboto;
@@ -39,6 +39,9 @@ tr {
     font-family: Roboto;
     overflow: hidden;
     background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
 }
 .topnav a {
     float: left;
@@ -47,6 +50,9 @@ tr {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 8px;
+    margin: 4px;
 }
 .topnav a:hover {
     background-color: #ddd;
