@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(to bottom right, #c0d9f5, #58a2ec);
+    background: linear-gradient(to bottom right, #b3d3f8, #50a2f3);
 }
 h1 {
     font-family: Roboto;
@@ -48,7 +48,7 @@ tr {
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 14px;
     text-decoration: none;
     transition: background-color 0.3s, color 0.3s;
     border-radius: 8px;
@@ -71,7 +71,7 @@ tr {
         font-size: 16px;
     }
     .topnav a {
-        padding: 10px 12px;
+        padding: 6px 8px;
         font-size: 14px;
     }
 }
