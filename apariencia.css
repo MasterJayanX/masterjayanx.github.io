@@ -1,5 +1,10 @@
 body {
-    background: linear-gradient(to bottom right, #b3d3f8, #50a2f3);
+    background: linear-gradient(to bottom right, #aed3fd, #50a2f3);
+}
+@-moz-document url-prefix() {
+    body {
+        background: linear-gradient(to right, #aed3fd, #50a2f3);
+    }
 }
 h1 {
     font-family: Roboto;
