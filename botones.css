@@ -7,15 +7,15 @@
     display: inline-block;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
-    transition: background-color 0.3s, transform 0.3s;
-    margin-right: 8px;
-    margin-left: 8px;
+    transition: background-color 0.25s, transform 0.25s;
+    margin-right: 6px;
+    margin-left: 6px;
 }
 .button i {
     margin-right: 12px;
 }
 .button:hover {
-    transform: scale(1.04);
+    transform: scale(1.03);
 }
 .yt {
     background-color: #ff0000;
