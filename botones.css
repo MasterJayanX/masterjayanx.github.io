@@ -64,6 +64,13 @@ footer .button {
 .tw:hover {
     background: linear-gradient(to bottom right, #5a3a9b, #8740f9);
 }
+.bsky {
+    background-color: #0081f7;
+    color: white;
+}
+.bsky:hover {
+    background-color: #0071e7;
+}
 .git {
     background-color: #24292e;
     color: white;
