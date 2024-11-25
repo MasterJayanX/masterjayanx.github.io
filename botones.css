@@ -65,11 +65,11 @@ footer .button {
     background: linear-gradient(to bottom right, #5a3a9b, #8740f9);
 }
 .bsky {
-    background-color: #0081f7;
+    background: linear-gradient(to bottom right, #1185fe, #0695f4);
     color: white;
 }
 .bsky:hover {
-    background-color: #0071e7;
+    background: linear-gradient(to bottom right, #0f7ed6, #0599e6);
 }
 .git {
     background-color: #24292e;
