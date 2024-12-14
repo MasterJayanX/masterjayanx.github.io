@@ -71,6 +71,13 @@ footer .button {
 .bsky:hover {
     background: linear-gradient(to bottom right, #0f7ed6, #0599e6);
 }
+.steam {
+    background: linear-gradient(to bottom, #031331, #0b70a4);;
+    color: white;
+}
+.steam:hover {
+    background: linear-gradient(to bottom, #020e24, #095a83);;
+}
 .git {
     background-color: #24292e;
     color: white;
