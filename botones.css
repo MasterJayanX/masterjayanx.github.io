@@ -92,6 +92,20 @@ footer .button {
 .kofi:hover {
     background-color: #1f8dbf;
 }
+.odysee {
+    background: linear-gradient(to bottom right, #f0206c, #fa9e21);
+    color: white;
+}
+.odysee:hover {
+    background: linear-gradient(to bottom right, #e61b66, #f58c1f);
+}
+.bitview {
+    background: linear-gradient(to top right, #008ecc 50%, #7ed5f8 85%, #ddf5ff 95%);
+    color: white;
+}
+.bitview:hover {
+    background: linear-gradient(to top right, #007dbd 50%, #6ecff5 85%, #d6f3ff 95%);
+}
 .gmail {
     background-color: #ea4335;
     color: white;
