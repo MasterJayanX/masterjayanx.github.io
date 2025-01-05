@@ -42,6 +42,7 @@ div {
 tr {
     font-family: Roboto;
 }
+
 .topnav {
     font-family: Roboto;
     overflow: hidden;
@@ -68,6 +69,19 @@ tr {
 .topnav a.active {
     background-color: #1c77ff;
     color: white;
+}
+
+.topnav-right {
+    float: right;
+    display: flex;
+    align-items: center;
+}
+.topnav-right a {
+    float: none;
+}
+.topnav-right a:hover {
+    background-color: #ddd;
+    color: black;
 }
 
 @media (max-width: 600px) {
