@@ -86,11 +86,11 @@ footer .button {
     background-color: #1b1f23;
 }
 .kofi {
-    background-color: #29abe0;
+    background-color: #72a4f2;
     color: white;
 }
 .kofi:hover {
-    background-color: #1f8dbf;
+    background-color: #5e8ee0;
 }
 .odysee {
     background: linear-gradient(to bottom right, #f0206c, #fa9e21);
@@ -112,6 +112,13 @@ footer .button {
 }
 .gmail:hover {
     background-color: #d93025;
+}
+.letterboxd {
+    background: linear-gradient(to right, #ff8000 20%, #00e054 40%, #00e054 60%, #40bcf4 80%);
+    color: white;
+}
+.letterboxd:hover {
+    background: linear-gradient(to right, #e67400 20%, #00c94a 40%, #00c94a 60%, #2e9ed8 80%);
 }
 .onecoreapi {
     background-color: #7ba617;
