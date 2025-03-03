@@ -106,6 +106,13 @@ footer .button {
 .bitview:hover {
     background: linear-gradient(to top right, #007dbd 50%, #6ecff5 85%, #d6f3ff 95%);
 }
+.reddit {
+    background-color: #ff4500;
+    color: white;
+}
+.reddit:hover {
+    background-color: #e63a00;
+}
 .gmail {
     background-color: #ea4335;
     color: white;
@@ -119,6 +126,13 @@ footer .button {
 }
 .letterboxd:hover {
     background: linear-gradient(to right, #e67400 20%, #00c94a 40%, #00c94a 60%, #2e9ed8 80%);
+}
+.nc {
+    background-color: #f59c32;
+    color: white;
+}
+.nc:hover {
+    background-color: #e68e2b;
 }
 .onecoreapi {
     background-color: #7ba617;
