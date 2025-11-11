@@ -1,9 +1,14 @@
 body {
-    background: linear-gradient(to bottom right, #98c8ff, #5baafa);
+    background: linear-gradient(to bottom right, #64acff, #2a95ff);
+    text-align: justify;
+}
+header {
+    padding: 10px;
+    text-align: center;
 }
 @-moz-document url-prefix() {
     body {
-        background: linear-gradient(to right, #98c8ff, #5baafa);
+        background: linear-gradient(to bottom right, #64acff, #2a95ff);
     }
 }
 h1 {
@@ -83,10 +88,15 @@ tr {
     background-color: #ddd;
     color: black;
 }
+.texto {
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: justify;
+}
 
 @media (max-width: 600px) {
     h1 {
-        font-size: 24px;
+        font-size: 28px;
     }
     p {
         font-size: 16px;
