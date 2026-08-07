@@ -32,7 +32,7 @@
     </style>
 </head>
 
-<link rel="stylesheet" href="apariencia.css">
+<link rel="stylesheet" href="apariencia-claro.css" id="estilo">
 <link rel="stylesheet" href="botones.css">
 
 <div class="topnav">
@@ -46,6 +46,13 @@
         <a href="https://twitter.com/masterjayanx" target="_blank" title="Sígueme en Twitter"><i class="fab fa-twitter"></i></a>
         <a href="https://tiktok.com/@master.jayanx" target="_blank" title="Sígueme en TikTok"><i class="fab fa-tiktok"></i></a>
         <a href="https://bsky.app/profile/masterjayanx.bsky.social" target="_blank" title="Sígueme en Bluesky"><i class="fab fa-bluesky"></i></a>
+        <select id="tema" onchange=cambiarTema()>
+            <option value="0">Selecciona un tema</option>
+            <option value="1">Claro</option>
+            <option value="2">Oscuro</option>
+            <option value="3">Azul</option>
+            <option value="4">Oscuro (OLED)</option>
+        </select>
     </div>
 </div>
 
@@ -53,9 +60,9 @@
     <div class="texto">
         <p>En este apartado publicaré guías para diferentes propósitos.</p>
         <p>Estas son las guías que he preparado hasta ahora:</p>
-        <a href="https://masterjayanx.github.io/guias/guia_onecoreapi" class="button onecoreapi"><i class="fab fa-windows"></i>Guía: Cómo instalar OneCore API en Windows XP</a></li>
-        <a href="https://masterjayanx.github.io/guias/guia_extendedkernel" class="button extendedkernel"><i class="fab fa-windows"></i>Guía: Cómo instalar Extended Kernel en Windows Vista</a></li>
-        <a href="https://masterjayanx.github.io/guias/guia_crear_vm" class="button maquina_virtual"><i class="fas fa-desktop"></i>Guía: Cómo crear en una máquina virtual</a></li>
+        <a href="https://masterjayanx.github.io/guias/guia_onecoreapi" class="button onecoreapi boton_guia"><i class="fab fa-windows"></i>Guía: Cómo instalar OneCore API en Windows XP</a></li>
+        <a href="https://masterjayanx.github.io/guias/guia_extendedkernel" class="button extendedkernel boton_guia"><i class="fab fa-windows"></i>Guía: Cómo instalar Extended Kernel en Windows Vista</a></li>
+        <a href="https://masterjayanx.github.io/guias/guia_crear_vm" class="button maquina_virtual boton_guia"><i class="fas fa-desktop"></i>Guía: Cómo crear en una máquina virtual</a></li>
         <p>También les dejo estos videos que les pueden interesar:</p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/3miojRNYvmI?si=Seb2DQtl3Hc5sdHa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/K8b4TeqHLcw?si=NvsqvhOqrdpnpIbT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -64,6 +71,7 @@
     <br>
     <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
     <script src="kofi.js"></script>
+    <script src="aspecto.js"></script>
 </body>
 
 </html>

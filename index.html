@@ -9,7 +9,8 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4334398560216376" crossorigin="anonymous"></script>
 </head>
 
-<link rel="stylesheet" href="apariencia.css">
+<body>
+<link rel="stylesheet" href="apariencia-claro.css" id="estilo">
 <link rel="stylesheet" href="botones.css">
 
 <div class="topnav">
@@ -23,6 +24,13 @@
         <a href="https://twitter.com/masterjayanx" target="_blank" title="Sígueme en Twitter"><i class="fab fa-twitter"></i></a>
         <a href="https://tiktok.com/@master.jayanx" target="_blank" title="Sígueme en TikTok"><i class="fab fa-tiktok"></i></a>
         <a href="https://bsky.app/profile/masterjayanx.bsky.social" target="_blank" title="Sígueme en Bluesky"><i class="fab fa-bluesky"></i></a>
+        <select id="tema" onchange=cambiarTema()>
+            <option value="0">Selecciona un tema</option>
+            <option value="1">Claro</option>
+            <option value="2">Oscuro</option>
+            <option value="3">Azul</option>
+            <option value="4">Oscuro (OLED)</option>
+        </select>
     </div>
 </div>
 
@@ -63,7 +71,7 @@
     <a href="https://twitter.com/masterjayanx?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-lang="es" data-show-count="false">Follow @masterjayanx</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <p class="texto">¡Hola! Soy MasterJayanX, un creador de contenido de informática en YouTube. 
         Mi canal fue creado el 12 de febrero de 2017, aunque no empecé a subir videos hasta octubre de ese año. Antes de 2018, subía videos de todo tipo, 
-        pero luego me di cuenta de que la tecnología se me daba bien y decidí enfocar mi canal en estos temas. Actualmente, cuento con más de 5900 suscriptores en mi canal principal
+        pero luego me di cuenta de que la tecnología se me daba bien y decidí enfocar mi canal en estos temas. Actualmente, cuento con más de 6000 suscriptores en mi canal principal
         de YouTube y más de 1000 seguidores en TikTok.</p>
     <p class="texto">En esta página, podrás encontrar información sobre mí, mis redes sociales, mis proyectos y algunas guías escritas que he hecho para
         aportar información para realizar ciertas cosas.</p>
@@ -72,8 +80,9 @@
     <iframe width="560" height="315" src="https://www.youtube.com/embed/P5j-ZDOSa58?si=kuANza5G6TvXSoe7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/EIF1iSqYcs4?si=7xDBdSqyLqv9OcI3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/sz9RH_0_8i0?si=T78J8O3HGIodCA4p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3miojRNYvmI?si=xtLXOHN620XMDjac" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     <div>
-        <h5>Última actualización: 10 de noviembre de 2025</h5>
+        <h5>Última actualización: 7 de agosto de 2026</h5>
     </div>
     <br>
     <br>
@@ -83,5 +92,6 @@
 <footer>
     <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
     <script src="kofi.js"></script>
+    <script src="aspecto.js"></script>
 </footer>
 </html>

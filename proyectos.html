@@ -9,7 +9,8 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4334398560216376" crossorigin="anonymous"></script>
 </head>
 
-<link rel="stylesheet" href="apariencia.css">
+<body>
+<link rel="stylesheet" href="apariencia-claro.css">
 <link rel="stylesheet" href="botones.css">
 
 <div class="topnav">
@@ -23,6 +24,13 @@
         <a href="https://twitter.com/masterjayanx" target="_blank" title="Sígueme en Twitter"><i class="fab fa-twitter"></i></a>
         <a href="https://tiktok.com/@master.jayanx" target="_blank" title="Sígueme en TikTok"><i class="fab fa-tiktok"></i></a>
         <a href="https://bsky.app/profile/masterjayanx.bsky.social" target="_blank" title="Sígueme en Bluesky"><i class="fab fa-bluesky"></i></a>
+        <select id="tema" onchange=cambiarTema()>
+            <option value="0">Selecciona un tema</option>
+            <option value="1">Claro</option>
+            <option value="2">Oscuro</option>
+            <option value="3">Azul</option>
+            <option value="4">Oscuro (OLED)</option>
+        </select>
     </div>
 </div>
 
@@ -39,7 +47,7 @@
 
 <body>
     <p>En esta página, podrás encontrar información sobre mis proyectos.</p>
-    <p><ins>JRescue</ins>: Sistema operativo dedicado a hacerle mantenimiento a algún PC que lo requiera. Puedes encontrar toda la información sobre este proyecto <a href="https://github.com/MasterJayanX/JRescue" target="_blank">haciendo clic aquí</a>.</p>
+    <p><ins>JRescue</ins>: Sistema operativo dedicado a hacerle mantenimiento a algún PC que lo requiera. Puedes encontrar toda la información sobre este proyecto <a href="https://sourceforge.net/projects/jrescue/" target="_blank">haciendo clic aquí</a>.</p>
     <p><ins>OneClickAppInstaller</ins>: pequeño programa que te permite crear un script para instalar múltiples aplicaciones en Windows, macOS o Linux con un solo clic. 
         Puedes encontrar toda la información sobre este proyecto <a href="https://github.com/MasterJayanX/OneClickAppInstaller" target="_blank">haciendo clic aquí</a>.</p>
     <p><ins>pmfow (Package Manager for Old Windows)</ins>: Gestor de paquetes para versiones antiguas de Windows. Puedes encontrar toda la información sobre este proyecto <a href="https://github.com/MasterJayanX/pmfow" target="_blank">haciendo clic aquí</a>.</p>
@@ -54,4 +62,5 @@
     <br>
     <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
     <script src="kofi.js"></script>
+    <script src="aspecto.js"></script>
 </html>

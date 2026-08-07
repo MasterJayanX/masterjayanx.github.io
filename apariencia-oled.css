@@ -1,0 +1,119 @@
+body {
+    background-color: black;
+    color: white;
+    text-align: justify;
+}
+header {
+    padding: 10px;
+    text-align: center;
+}
+h1 {
+    font-family: Roboto;
+    font-size: 32px;
+    color: #f2f2f2;
+    text-align: center;
+    margin-top: 4px;
+}
+
+p {
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+h2 {
+    font-family: Roboto;
+}
+h3 {
+    font-family: Roboto;
+}
+h4 {
+    font-family: Roboto;
+}
+h5 {
+    font-family: Roboto;
+}
+h6 {
+    font-family: Roboto;
+}
+ul {
+    font-family: Roboto;
+}
+div {
+    font-family: Roboto;
+}
+tr {
+    font-family: Roboto;
+}
+
+.topnav {
+    font-family: Roboto;
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+}
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 14px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 10px;
+    margin: 4px;
+}
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.topnav a.active {
+    background-color: #1c77ff;
+    color: white;
+}
+
+.topnav-right {
+    float: right;
+    display: flex;
+    align-items: center;
+}
+.topnav-right a {
+    float: none;
+}
+.topnav-right a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.topnav-right select {
+    padding: 6px 8px;
+    font-size: 14px;
+    border-radius: 10px;
+    margin: 4px;
+    background-color: #333;
+    color: #f2f2f2;
+    border: none;
+    cursor: pointer;
+}
+.texto {
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: justify;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 28px;
+    }
+    p {
+        font-size: 16px;
+    }
+    .topnav a {
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+    .topnav-right {
+        float: left;
+    }
+}

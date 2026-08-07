@@ -99,12 +99,12 @@ footer .button {
 .odysee:hover {
     background: linear-gradient(to bottom right, #e61b66, #f58c1f);
 }
-.bitview {
-    background: linear-gradient(to top right, #008ecc 50%, #7ed5f8 85%, #ddf5ff 95%);
+.patreon {
+    background-color: #f96854;
     color: white;
 }
-.bitview:hover {
-    background: linear-gradient(to top right, #007dbd 50%, #6ecff5 85%, #d6f3ff 95%);
+.patreon:hover {
+    background-color: #e65c4a;
 }
 .reddit {
     background-color: #ff4500;
@@ -154,6 +154,11 @@ footer .button {
 }
 .maquina_virtual:hover {
     background-color: #1f3a5f;
+}
+
+.boton_guia {
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
 @media (max-width: 600px) {
