@@ -10,7 +10,7 @@
     crossorigin="anonymous"></script>
 </head>
     
-<link rel="stylesheet" href="../apariencia.css">
+<link rel="stylesheet" href="../apariencia-claro.css" id="estilo">
 <link rel="stylesheet" href="../botones.css">
     
 <div class="topnav">
@@ -24,7 +24,7 @@
         <a href="https://twitter.com/masterjayanx" target="_blank" title="Sígueme en Twitter"><i class="fab fa-twitter"></i></a>
         <a href="https://tiktok.com/@master.jayanx" target="_blank" title="Sígueme en TikTok"><i class="fab fa-tiktok"></i></a>
         <a href="https://bsky.app/profile/masterjayanx.bsky.social" target="_blank" title="Sígueme en Bluesky"><i class="fab fa-bluesky"></i></a>
-        <select id="tema" onchange=cambiarTema()>
+        <select id="tema" onchange=cambiarTema(true)>
             <option value="0">Selecciona un tema</option>
             <option value="1">Claro</option>
             <option value="2">Oscuro</option>
@@ -74,12 +74,33 @@
     <p>Una máquina virtual podría describirse en simples palabras como un computador dentro de otro computador, permitiendo una emulación completa del hardware y el software para dicho &quot;computador&quot;.</p>
     <p>Las máquinas virtuales tienen múltiples usos, siendo el principal el poder usar dos o más sistemas operativos en tu computador simultáneamente. Otros usos más específicos incluyen hacer pruebas de virus sin vulnerear tu sistema operativo, crear instancias de servidores o crear un entorno seguro para el desarrollo de aplicaciones.</p>
     <p>Crear una máquina virtual puede ser algo confuso para algunos, pero la verdad es que es más sencillo de lo que parece y es por eso que hice esta guía.</p>
+    <div class="indice">
+        <h2>Índice</h2>
+        <ul>
+            <li><a href="#parte-1-descargar-el-sistema-operativo">Parte 1: Descargar el sistema operativo</a></li>
+            <li><a href="#parte-2-crear-la-máquina-virtual">Parte 2: Crear la máquina virtual</a>
+                <ul>
+                    <li><a href="#oracle-vm-virtualbox">Oracle VM Virtualbox</a></li>
+                    <li><a href="#vmware-workstation">VMware Workstation</a></li>
+                    <li><a href="#kvm">QEMU/KVM</a></li>
+                </ul>
+            </li>
+            <li><a href="#parte-3-finalizar-la-instalación">Parte 3: Finalizar la instalación</a>
+                <ul>
+                    <li><a href="#oracle-vm-virtualbox-1">Oracle VM Virtualbox</a></li>
+                    <li><a href="#vmware-workstation-1">VMware Workstation</a></li>
+                    <li><a href="#kvm-1">QEMU/KVM</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
     <h2 id="parte-1-descargar-el-sistema-operativo">Parte 1: Descargar el sistema operativo</h2>
     <p>El primer paso es el más sencillo y probablemente el más corto, siendo el de elegir el sistema operativo que quieras instalar. Los más recomendables son cualquier versión de Windows y cualquier distribución de Linux, ya que estos suelen ser los sistemas operativos que más se utilizan en entornos virtualizados.</p>
     <p>Para descargar el sistema operativo de tu elección, debes simplemente ir a su sitio web de descarga, elegir la última versión disponible y descargar el archivo .iso correspondiente. En algunos casos, te dará a elegir entre x86, x86_64 y, en algunos casos, ARM (aarch64), PowerPC y/o RISC V, por lo que en estos casos deberás elegir x86 para 32 bits o x86_64 para 64 bits.</p>
     <h4>Nota: para versiones antiguas de Windows, es probable que tengas que descargarlas desde sitios web externos.</h4>
     <h2 id="parte-2-crear-la-máquina-virtual">Parte 2: Crear la máquina virtual</h2>
-    <p>Este proceso tiene algunas diferencias según el hipervisor (software de máquinas virtuales) que estés usando, por lo que les explicaré los pasos para Oracle VM Virtualbox y para VMware Workstation (próximamente lo haré con QEMU). Para el sistema operativo de la máquina virtual, usaré Ubuntu, pero esta guía sirve para cualquier sistema operativo que quieras.</p>
+    <p>Este proceso tiene algunas diferencias según el hipervisor (software de máquinas virtuales) que estés usando, por lo que les explicaré los pasos para Oracle VM Virtualbox, VMware Workstation y QEMU/KVM, este último usando virt-manager como front-end. Para el sistema operativo de la máquina virtual, usaré Ubuntu, pero esta guía sirve para cualquier sistema operativo que quieras.</p>
     <h3 id="oracle-vm-virtualbox">Oracle VM Virtualbox</h3>
     <ol>
     <li><p>Al abrir el programa, haz clic en el botón de la parte superior que dice Nueva para crear una nueva máquina virtual.</p>
@@ -118,8 +139,7 @@
     <img src="../imagenes/imagen6.png" class="img2" />
     </figure>
     </li>
-    <li><p>Por defecto, VMware Workstation realizará una instalación desatendida (Easy Install), por lo que te pedirá colocar los datos que quieras usar para la máquina virtual (nombre de usuario y contraseña del sistema operativo y la clave de producto si vas a instalar Windows). Sin embargo, esto se puede omitir si no seleccionas un archivo .iso en el primer menú.</p>
-    </li>
+    <li><p>Por defecto, VMware Workstation realizará una instalación desatendida (Easy Install), por lo que te pedirá colocar los datos que quieras usar para la máquina virtual (nombre de usuario y contraseña del sistema operativo y la clave de producto si vas a instalar Windows). Sin embargo, esto se puede omitir si no seleccionas un archivo .iso en el primer menú.</p></li>
     <li><p>Luego te pedirá darle un nombre a la máquina virtual y elegir la carpeta en la que la quieres guardar. </p>
     <figure>
     <img src="../imagenes/imagen8.png" class="img2" />
@@ -130,15 +150,54 @@
     <img src="../imagenes/imagen9.png" class="img2" />
     </figure>
     </li>
-    <li><p>Finalmente te dejará ajustar otras opciones de la máquina virtual como la RAM que le quireres asignar o la cantidad de núcleos del CPU. Las opciones que recomiendo son las que menciono en el paso 4 para Oracle VM Virtualbox.</p>
-    </li>
+    <li><p>Finalmente te dejará ajustar otras opciones de la máquina virtual como la RAM que le quireres asignar o la cantidad de núcleos del CPU. Las opciones que recomiendo son las que menciono en el paso 4 para Oracle VM Virtualbox.</p></li>
     </ol>
     <p>Nota: la cantidad de RAM se mostrará en MB en VMware. Para pasar de GB a MB basta con multiplicar el valor por 1024 (ejemplo: 8 GB = 8192 MB).</p>
     <ol start="7">
-    <li><p>Una vez que hayas verificado que todo está como deseas, puedes darle a Terminar y encender la máquina virtual (puede que esto se haga automáticamente si mantuviste la instalación desatendida habilitada).</p>
+    <li><p>Una vez que hayas verificado que todo está como deseas, puedes darle a Terminar y encender la máquina virtual (puede que esto se haga automáticamente si mantuviste la instalación desatendida habilitada).</p></li>
+    <li><p>Instala el sistema operativo como lo harías normalmente, siguiendo las instrucciones que aparecen en pantalla.</p></li>
+    </ol>
+    <h3 id="kvm">QEMU/KVM</h3>
+    <ol>
+    <li><p>Al abrir virt-manager, haz clic en el botón de la parte superior que dice Crear una nueva máquina virtual.</p>
+    <figure>
+    <img src="../imagenes/imagen12.png" class="img2" />
+    </figure>
     </li>
-    <li><p>Instala el sistema operativo como lo harías normalmente, siguiendo las instrucciones que aparecen en pantalla.</p>
+    <li><p>Aparecerá una ventana de diálogo para crear la nueva máquina virtual. En la sección 'Conexión', elige QEMU/KVM y en la parte inferior elige la opción 'Medio de instalación local (imagen ISO o CDROM)'.</p>
+    <figure>
+    <img src="../imagenes/imagen13.png" class="img2" />
+    </figure>
     </li>
+    <li><p>Luego, selecciona el archivo .iso del sistema operativo que deseas instalar. Para ello, haz clic en el botón 'Explorar' y navega hasta el archivo .iso que deseas usar.
+    Cabe destacar que dentro del submenú es recomendable elegir la opción 'Explorar localmente' para seleccionar el archivo .iso sin tener que agregar el directorio completo manualmente como un "pool".</p>
+    <figure>
+    <img src="../imagenes/imagen14.png" class="img2" />
+    </figure>
+    <figure>
+    <img src="../imagenes/imagen15.png" class="img2" />
+    </figure>
+    </li>
+    <li><p>En la siguiente pantalla, elige la cantidad de RAM y núcleos del procesador que deseas asignar a la máquina virtual. Cabe destacar que la cantidad de RAM se mostrará en MB en QEMU/KVM. Para pasar de GB a MB basta con multiplicar el valor por 1024 (ejemplo: 8 GB = 8192 MB).</p>
+    <figure>
+    <img src="../imagenes/imagen16.png" class="img2" />
+    </figure>
+    </li>
+    <li>En este punto toca crear el medio de almacenamiento para la máquina virtual. La opción más simple es seleccionar la opción 'Crear una imagen de disco para la máquina virtual'
+    y luego elegir el tamaño de almacenamiento que deseas asignar a la máquina virtual. Lo recomendable es darle suficiente almacenamiento a la máquina virtual 
+    para las tareas que desees hacer con ella sin saturar la unidad de almacenamiento (disco duro, SSD, pendrive etc.) en la que está alojada. En este ejemplo, le asigné 40 GB.
+    Al seleccionar esta opción, la imagen de almacenamiento de la máquina virtual se creará en el directorio '<strong>/var/lib/libvirt/images</strong>'.</p>
+    <figure>
+    <img src="../imagenes/imagen17.png" class="img2" />
+    </figure>
+    </li>
+    <li><p>Finalmente, te pedirá asignarle un nombre a la máquina virtual y verificar la configuración antes de crearla. Para finalizar la configuración, haz clic en 'Finalizar' y la máquina virtual se encenderá automáticamente.
+    Por otro lado, si deseas hacer cambios en la configuración antes de encenderla, haz clic en 'Personalizar la configuración antes de instalar'. En este caso, se abrirá un menú de configuración completo donde podrás modificar todos los parámetros 
+    de la máquina virtual, aunque esto no es necesario en la mayoría de los casos.</p>
+    </li>
+    <figure>
+    <img src="../imagenes/imagen18.png" class="img2" />
+    </figure>
     </ol>
     <h2 id="parte-3-finalizar-la-instalación">Parte 3: Finalizar la instalación</h2>
     <h3 id="oracle-vm-virtualbox-1">Oracle VM Virtualbox</h3>
@@ -165,8 +224,12 @@
     <li><p>Por otro lado, si estás en Linux y open-vm-tools no está instalado, puedes instalarlo usando el gestor de paquetes de tu distribución. Por ejemplo, en Debian o Ubuntu sería <code>sudo apt install open-vm-tools-desktop</code>.</p>
     </li>
     </ol>
+    <h3 id="kvm-1">QEMU/KVM</h3>
+    <p>Una vez finalizada la instalación, la mayoría de las distribuciones Linux vienen con las utilidades de QEMU/KVM (<code>qemu-guest-agent</code>) preinstaladas. Si no es así, puedes instalarlas manualmente, aunque el proceso puede depender de tu distribución Linux. Por ejemplo, en Debian o Ubuntu sería <code>sudo apt update && sudo apt install qemu-guest-agent && sudo systemctl enable --now qemu-guest-agent</code>.</p>
+    <p>En el caso de hayas creado una máquina virtual de Windows, deberás instalar los controladores de VirtIO para mejorar la experiencia de uso. Para ello, deberás descargar la última versión del controlador a través de <a href="https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/?C=M;O=D" title="Descargar controladores de VirtIO" target="_blank">este enlace</a>.
+    Luego, inserta el archivo .iso descargado en la unidad de CD/DVD de la máquina virtual y sigue los pasos de instalación. Una vez hecho esto, debes reiniciar la máquina virtual para aplicar los cambios.</p>
     <div>
-        <h5>Última actualización: 7 de agosto de 2024</h5>
+        <h5>Última actualización: 7 de agosto de 2026</h5>
     </div>
     </div>
     <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Apóyame', '#29abe0', 'D1D37FMC3');kofiwidget2.draw();</script> 
@@ -186,7 +249,7 @@
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-    <script src="aspecto.js"></script>
+    <script src="../aspecto.js"></script>
 </footer>
 
 </html>

@@ -44,6 +44,7 @@ div {
 }
 tr {
     font-family: Roboto;
+    color: white;
 }
 
 .topnav {
@@ -100,6 +101,20 @@ tr {
     margin-left: 5%;
     margin-right: 5%;
     text-align: justify;
+}
+
+.indice {
+    background-color: #6b6b6b;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    font-size: 1.25em;
+}
+
+.indice ul {
+    list-style-type: none;
+    padding: 0;
 }
 
 @media (max-width: 600px) {

@@ -16,7 +16,7 @@ function getCookie(nombre) {
     return null;
 }
 
-function cambiarTema(guardar = true) {
+function cambiarTema(es_guia, guardar = true) {
     var estilo = document.getElementById("estilo");
     var opciones = document.getElementById("tema");
     var estiloSeleccionado = opciones.value;
@@ -30,33 +30,58 @@ function cambiarTema(guardar = true) {
         console.log("Tema guardado: " + estiloSeleccionado);
     }
     if (estiloSeleccionado === "1") {
-        estilo.href = "apariencia-claro.css";
+        if (es_guia) {
+            estilo.href = "../apariencia-claro.css";
+        } else {
+            estilo.href = "apariencia-claro.css";
+        }
     } else if (estiloSeleccionado === "2") {
-        estilo.href = "apariencia-oscuro.css";
+        if (es_guia) {
+            estilo.href = "../apariencia-oscuro.css";
+        } else {
+            estilo.href = "apariencia-oscuro.css";
+        }
     } else if (estiloSeleccionado === "3") {
-        estilo.href = "apariencia-azul.css";
+        if (es_guia) {
+            estilo.href = "../apariencia-azul.css";
+        } else {
+            estilo.href = "apariencia-azul.css";
+        }
     } else if (estiloSeleccionado === "4") {
-        estilo.href = "apariencia-oled.css";
+        if (es_guia) {
+            estilo.href = "../apariencia-oled.css";
+        } else {
+            estilo.href = "apariencia-oled.css";
+        }
     }
 }
 
 window.onload = function() {
     var temaGuardado = getCookie("tema");
+    const directorio = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
+    let es_guia = false;
+    if (directorio.includes("/guias/")) {
+        es_guia = true;
+        console.log("Directorio de guía detectado: " + directorio);
+    } else {
+        es_guia = false;
+        console.log("Directorio de guía no detectado: " + directorio);
+    }
     if (temaGuardado && temaGuardado !== "0") {
         var opciones = document.getElementById("tema");
         opciones.value = temaGuardado;
-        cambiarTema(false);
+        cambiarTema(es_guia, false);
         console.log("Tema guardado encontrado: " + temaGuardado);
     } else {
         console.log("No hay tema guardado o el tema es inválido.");
         const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
         if (isDarkMode) {
             document.getElementById("tema").value = "2";
-            cambiarTema(false);
+            cambiarTema(es_guia, false);
             console.log("Modo oscuro detectado, aplicando tema oscuro.");
         } else {
             document.getElementById("tema").value = "1";
-            cambiarTema(false);
+            cambiarTema(es_guia, false);
             console.log("Modo claro detectado, aplicando tema claro.");
         }
     }

@@ -10,7 +10,7 @@
     crossorigin="anonymous"></script>
 </head>
 
-<link rel="stylesheet" href="../apariencia.css">
+<link rel="stylesheet" href="../apariencia-claro.css" id="estilo">
 <link rel="stylesheet" href="../botones.css">
 
 <div class="topnav">
@@ -24,7 +24,7 @@
         <a href="https://twitter.com/masterjayanx" target="_blank" title="Sígueme en Twitter"><i class="fab fa-twitter"></i></a>
         <a href="https://tiktok.com/@master.jayanx" target="_blank" title="Sígueme en TikTok"><i class="fab fa-tiktok"></i></a>
         <a href="https://bsky.app/profile/masterjayanx.bsky.social" target="_blank" title="Sígueme en Bluesky"><i class="fab fa-bluesky"></i></a>
-        <select id="tema" onchange=cambiarTema()>
+        <select id="tema" onchange=cambiarTema(true)>
             <option value="0">Selecciona un tema</option>
             <option value="1">Claro</option>
             <option value="2">Oscuro</option>
@@ -62,7 +62,8 @@
     <div class="guia">
     <h3>Extended Kernel es un conjunto de archivos de sistema que le permiten a Windows Vista ejecutar versiones modernas de aplicaciones que oficialmente dejaron de darle soporte a dicho sistema operativo. </h3>
     <p>El proceso de instalación de Extended Kernel es bastante simple y en esta guía escrita les mostraré paso a paso cómo instalar Extended Kernel y cómo usarlo.</p>
-    <p>Importante: deben descargar los archivos desde <a href="https://ximonite.com/win32/download">este enlace</a>.</p>
+    <p><b><u>Actualización 2026:</u> Extended Kernel dejó de recibir actualizaciones en el año 2023, por lo que la compatibilidad con aplicaciones más actuales puede ser limitada.</b></p>
+    <p>Importante: deben descargar los archivos desde <a href="https://win32subsystem.live/extended-kernel/">este enlace</a>.</p>
     <p>Prerrequisitos: Windows Vista SP2 (32 o 64 bits, preferiblemente 64 bits) instalado.</p>
     <p>Paso 1: Descargar e instalar la actualización cumulativa <a href="https://www.catalog.update.microsoft.com/search.aspx?q=kb4474419">KB4474419</a>. Deben elegir la versión para Windows Server 2008 y 
         dependiendo de la arquitectura de su procesador deben descargar el archivo que dice x86 para 32 bits o el que dice x64 para 64 bits.</p>
@@ -77,7 +78,7 @@
     <p><span style="font-family: courier;">MinorVersion=1</span></p><p><span style="font-family: courier;">BuildNumber=7601</span></p><p>Luego se debe guardar el archivo como osver.ini (es importante cambiar la extensión del archivo, lo cual se puede hacer cambiando el tipo de guardado a "Todos los archivos" o "All Files"). Dicho archivo deberá ser movido a la carpeta C:\Windows.</p>
     <p>En este caso, cada línea tiene un significado:</p>
     <p></p><ul>
-        <li><span style="font-family: courier;">Enabled=1</span>: Representa si el sistema operativo debe usar los valores del archivo o no.</li><li><span style="font-family: courier;">MajorVersion=6</span>: Número de versión mayor del kernel de Windows NT. En este caso, el número 6 es el número de versión de Windows que se usa desde Windows Vista hasta Windows 8.1 (este número se cambió a 10 en Windows 10).</li>
+        <li><span style="font-family: courier;">Enabled=1</span>: Representa si el sistema operativo debe usar los valores del archivo o no (1=sí, 0=no).</li><li><span style="font-family: courier;">MajorVersion=6</span>: Número de versión mayor del kernel de Windows NT. En este caso, el número 6 es el número de versión de Windows que se usa desde Windows Vista hasta Windows 8.1 (este número se cambió a 10 en Windows 10).</li>
         <li><span style="font-family: courier;">MinorVersion=1</span>: Número de versión menor del kernel de Windows NT. En este caso, el número 1 es el número de versión de Windows 7.</li><li><span style="font-family: courier;">BuildNumber=7601</span>: Número de compilación (o build) del kernel de Windows NT. En este caso, el número 7601 es el número de compilación de Windows 7.</li>
     </ul>
     <p>Esto engañará a las aplicaciones para que piensen que se está usando Windows 7 en vez de Windows Vista. En el caso de OBS, deberán cambiar&nbsp;<span style="font-family: courier;">MajorVersion</span>&nbsp;a 10,&nbsp;<span style="font-family: courier;">MinorVersion</span>&nbsp;a 0 y&nbsp;<span style="font-family: courier;">BuildNumber</span>&nbsp;a 19045, 19044, 19042 o cualquier número de compilación válido para Windows 10. 
@@ -100,7 +101,7 @@
             <p>Steam (última versión)</p>
             <p>Adobe Reader (última versión)</p>
             <div>
-                <h5>Última actualización: 31 de enero de 2024</h6>
+                <h5>Última actualización: 7 de agosto de 2026</h5>
             </div>
         </div>
     </div>
@@ -121,7 +122,7 @@
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-    <script src="aspecto.js"></script>
+    <script src="../aspecto.js"></script>
 </footer>
 
 </html>
